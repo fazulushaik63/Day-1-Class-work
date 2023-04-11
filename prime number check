@@ -1,0 +1,28 @@
+# Day-1-Class-work
+#include<stdio.h>
+int main() {
+    int low, high,i,flag;
+    printf("Enter any Numbers(interval);");
+    scanf("%d %d", &low, %high);
+    printf("prime Numbers between %d and %d are:", low, high);
+    int count=0;
+    while(low<high){
+        flag=0;
+        if(low<=1){
+            continue;
+        }
+        for (i=2;i<=low/2;++i){
+            if(low%i==0){
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0){
+            printf("%d",low);
+            count += 1;
+        }
+        ++low;
+    }
+    printf("\nThere are %d prime numbers\n",count);
+    return 0;
+}
